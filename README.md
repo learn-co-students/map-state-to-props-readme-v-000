@@ -23,7 +23,7 @@ const store = configureStore();
 
 ReactDOM.render(
   <Provider store={store}>
-   <App />
+    <App store={store} />
   </Provider>,
   document.getElementById('root')
 );
@@ -48,8 +48,11 @@ Here's how it works:
 Open up `src/App.js` and add the following:
 
 ```javascript
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
  ...
+
+
+// export default App;
 
 const connectedComponent = connect(mapStateToProps)(App)
 
@@ -128,4 +131,3 @@ function mapStateToProps(state){
 ```
 
 That is saying connect the data in mapStateToProps (the items portion of the state) to the App component. And the App component can access that state with as this.props.items.  Don't fret if you still feel hazy on connect and mapStateToProps.  It simply is confusing.  We won't introduce any new material in the next code along, we'll just try to deepen our understanding of the material covered in this section.  First, please take at least a 15 minute break before moving on.  
-# map-state-to-props-readme
