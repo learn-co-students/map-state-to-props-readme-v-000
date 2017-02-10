@@ -5,14 +5,14 @@ class App extends Component {
 
   handleOnClick() {
     this.props.store.dispatch({
-      type: 'GET_COUNT_OF_ITEMS',
+      type: 'INCREASE_COUNT',
     });
   }
 
   render() {
     return (
       <div className="App">
-        <button onClick={(event) => this.handleOnClick}>
+        <button onClick={(event) => this.handleOnClick()}>
           Click
         </button>
         <p>{this.props.items.length}</p>
