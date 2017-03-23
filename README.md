@@ -1,6 +1,6 @@
 ### Summary
 
-When we last left off, we successfully used our __createStore()__ method, and integrated our the method into our __React__ application to update our state. Unfortunately, our __React__ application did not re-render in response to changes in the state. In this lesson, we'll fix that.
+When we last left off, we successfully used our __createStore()__ method, and integrated the method into our __React__ application to update our state. Unfortunately, our __React__ application did not re-render in response to changes in the state. In this lesson, we'll fix that.
 
 ## Use the Provider component from React Redux
 
@@ -124,3 +124,5 @@ connect(mapStateToProps)(App);
 ```
 
 That is saying connect the data in __mapStateToProps()__ (the items portion of the state) to the __App__ component. And the __App__ component can access that state with as this.props.items. Don't fret if you still feel hazy on __connect()__ and __mapStateToProps()__. This is a new middleware api that takes time to learn. We won't introduce any new material in the next code along, we'll just try to deepen our understanding of the material covered in this section. First, please take at least a 15 minute break before moving on.  
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/map-state-to-props-readme'>Map State To Props Readme</a> on Learn.co and start learning to code for free.</p>
