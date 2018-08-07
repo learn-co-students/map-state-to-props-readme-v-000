@@ -82,7 +82,7 @@ import './App.css';
 class App extends Component {
 
   handleOnClick() {
-    this.props.store.dispatch({
+    this.props.dispatch({
       type: 'INCREASE_COUNT',
     });
   }
@@ -154,7 +154,26 @@ through it some more.  But for now, let's boot up our application, click the
 button, and see if we can finally get our application to render. Ok, it works -
 our component now properly re-renders!
 
-###Summary
+#### A Note on `dispatch`
+
+In the example code for App, you may have noticed something odd:
+
+```js
+  handleOnClick() {
+    this.props.dispatch({
+      type: 'INCREASE_COUNT',
+    });
+  }
+```
+
+We have a prop named dispatch! But where did it come from if its a prop? We 
+will go into greater detail later, but `dispatch` is automatically provided
+by `connect` if it is missing a _second_ argument. That second argument is
+reserved for `mapDispatchToProps`, which allows us to customize how we send
+actions to our reducer. Without the second argument we will still be able to
+use `dispatch` on any component wrapped with `connect`.
+
+## Conclusion
 
 We learned of two new pieces of __React Redux__ middleware: __connect()__ and
 __Provider__.  The two pieces work hand in hand. __Provider__ ensures that our
