@@ -1,16 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore } from 'redux';
+import { Provider } from 'react-redux'; /* code change */
 import shoppingListItemReducer from './reducers/shoppingListItemReducer';
 import App from './App';
 import './index.css';
-
+ 
 const store = createStore(
   shoppingListItemReducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
-
+ 
 ReactDOM.render(
-  <App store={store}/>,
+  
+  // Note : Provider makes store available to all components AND lets Redux know when there has been a change in state, causing a React app re-render -- linked to "Connect" library component
+  <Provider store={store}>
+    <App />
+  </Provider>, /* code change */
   document.getElementById('root')
 );
