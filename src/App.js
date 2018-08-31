@@ -21,4 +21,11 @@ class App extends Component {
   }
 };
 
-export default App;
+// start of code change
+const mapStateToProps = (state) => {
+  return { items: state.items };
+};
+ 
+export default connect(mapStateToProps)(App);
+// end of code change
+
