@@ -7,7 +7,7 @@ class App extends Component {
     this.props.store.dispatch({
       type: 'INCREASE_COUNT',
     });
-  }
+  } 
 
   render() {
     return (
