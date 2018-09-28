@@ -1,4 +1,4 @@
-### Summary
+### Lecture/Summary
 
 When we last left off, we successfully used our __createStore()__ method, and
 integrated the method into our __React__ application to update our state.
@@ -166,7 +166,7 @@ In the example code for App, you may have noticed something odd:
   }
 ```
 
-We have a prop named dispatch! But where did it come from if its a prop? We 
+We have a prop named dispatch! But where did it come from if its a prop? We
 will go into greater detail later, but `dispatch` is automatically provided
 by `connect` if it is missing a _second_ argument. That second argument is
 reserved for `mapDispatchToProps`, which allows us to customize how we send
