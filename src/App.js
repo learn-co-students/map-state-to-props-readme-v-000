@@ -30,6 +30,5 @@ const mapStateToProps = (state) => {
 // connect function listens to every change in the store
 // mapStateToProps is a function we write to specify what to provide our Component
 
-
 export default connect(mapStateToProps)(App);
 // end of code change
