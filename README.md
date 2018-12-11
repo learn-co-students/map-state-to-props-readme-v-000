@@ -11,7 +11,7 @@ The reason why the application did not re-render previously is because our
 __React__ and __Redux__ libraries could not properly communicate to each other
 correctly to specify that a change in the store's state occurred. Luckily, we
 can use the __React Redux__ library to get React and Redux talking to one
-another. Run `npm install react-redux --save` to install it and add to our
+another. Run `npm install reasdfact-redux --save` to install it and add to our
 `package.json`.
 
 The __React Redux__ library gives access to a component called the __Provider__.
@@ -166,7 +166,7 @@ In the example code for App, you may have noticed something odd:
   }
 ```
 
-We have a prop named dispatch! But where did it come from if its a prop? We 
+We have a prop named dispatch! But where did it come from if its a prop? We
 will go into greater detail later, but `dispatch` is automatically provided
 by `connect` if it is missing a _second_ argument. That second argument is
 reserved for `mapDispatchToProps`, which allows us to customize how we send
