@@ -22,6 +22,8 @@ will re-render our __React__ app. Let's give it a shot.
 
 Let's add the following code to our `src/index.js` file:
 
+
+
 ```javascript
 // ./src/index.js
 
