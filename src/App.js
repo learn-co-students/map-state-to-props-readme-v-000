@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import './App.css';
 
 class App extends Component {
 
   handleOnClick() {
-    this.props.store.dispatch({
+    this.props.dispatch({
       type: 'INCREASE_COUNT',
     });
   }
@@ -21,4 +22,12 @@ class App extends Component {
   }
 };
 
-export default App;
+/* filters out the changes relevant to a particular component -- component can access items as a prop */
+const mapStateToProps = (state) => {
+
+  return { items: state.items };
+}
+
+/* connect function synced up to our store, listening to each change in the state that occurs */
+/* connect function connets state to App component -- App now receives the correct data */
+export default connect(mapStateToProps)(App);
