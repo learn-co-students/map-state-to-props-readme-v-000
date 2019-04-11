@@ -1,16 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
 import shoppingListItemReducer from './reducers/shoppingListItemReducer';
 import App from './App';
 import './index.css';
 
 const store = createStore(
   shoppingListItemReducer,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  composeWithDevTools()
 );
 
 ReactDOM.render(
-  <App store={store}/>,
+  <Provider store={store}>
+    <App />
+  </Provider>,
   document.getElementById('root')
 );
