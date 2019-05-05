@@ -14,6 +14,7 @@ class App extends Component {
 			<div className="App">
 				<button onClick={(event) => this.handleOnClick()}>Click</button>
 				<p>{this.props.items.length}</p>
+				<p> Hello World</p>
 			</div>
 		);
 	}
