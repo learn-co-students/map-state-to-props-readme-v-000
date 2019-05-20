@@ -1,5 +1,3 @@
-// ./src/App.js
-
 import React, { Component } from 'react';
 import { connect } from 'react-redux'; /* code change */
 import './App.css';
@@ -24,10 +22,8 @@ class App extends Component {
   }
 };
 
-// start of code change
 const mapStateToProps = (state) => {
   return { items: state.items };
 };
 
 export default connect(mapStateToProps)(App);
-// end of code change
