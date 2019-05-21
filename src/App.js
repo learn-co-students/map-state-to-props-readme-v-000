@@ -4,7 +4,7 @@ import "./App.css";
 
 class App extends Component {
   handleOnClick() {
-    this.props.store.dispatch({
+    this.props.dispatch({
       type: "INCREASE_COUNT"
     });
   }
@@ -13,14 +13,15 @@ class App extends Component {
     return (
       <div className="App">
         <button onClick={event => this.handleOnClick()}>Click</button>
-        <p>{this.props.items.length}</p>
+        <p>{this.props.list.length}</p>
       </div>
     );
   }
 }
 
-const mapStateToProps = state => {
-  return { items: state.items };
+const mapStateToProps = props => {
+  console.log(props);
+  return { list: props.list };
 };
 
 export default connect(mapStateToProps)(App);
