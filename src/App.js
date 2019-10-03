@@ -23,8 +23,8 @@ class App extends Component {
   }
 };
 
-const mapStateToProps = (state) => {
+const vanilla = (state) => {
   return { items: state.itemes };
 };
 
-export default connect(mapStateToProps) (App);
+export default connect(vanilla) (App);
