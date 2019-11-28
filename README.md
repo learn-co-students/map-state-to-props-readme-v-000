@@ -121,6 +121,7 @@ what is doing what.
 export default connect(mapStateToProps)(App);
 ```
 
+
 The connect function is taking care of task 1, it is synced up to our store,
 listening to each change in the state that occurs. When a change occurs, it
 calls a function *that we write* called __mapStateToProps()__, and in
