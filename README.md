@@ -5,6 +5,7 @@ integrated the method into our __React__ application to update our state.
 Unfortunately, our __React__ application did not re-render in response to
 changes in the state. In this lesson, we'll fix that.
 
+
 ## Use the Provider component from React Redux
 
 The reason why the application did not re-render previously is because our
@@ -166,7 +167,7 @@ In the example code for App, you may have noticed something odd:
   }
 ```
 
-We have a prop named dispatch! But where did it come from if it's a prop? We 
+We have a prop named dispatch! But where did it come from if it's a prop? We
 will go into greater detail later, but `dispatch` is automatically provided
 by `connect` if it is missing a _second_ argument. That second argument is
 reserved for `mapDispatchToProps`, which allows us to customize how we send
