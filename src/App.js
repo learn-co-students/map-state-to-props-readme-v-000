@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import './App.css';
 
 class App extends Component {
@@ -21,4 +22,13 @@ class App extends Component {
   }
 };
 
-export default App;
+// const mapStateToProps = (state) => {
+//   return { items: state.items };
+// };
+// Interesting; const mapStateToProps = state => { items: state.items };
+// doesn't work (might be because of conflicting syntax with {} - it's either an object or a block).
+
+// However, this syntax works, according to the documentation:
+const mapStateToProps = state => ({ items: state.items });
+
+export default connect(mapStateToProps)(App);
