@@ -1,3 +1,5 @@
+// see my notes google docs on this 
+
 export default function shoppingListItemReducer(state = {
   items: []
 }, action) {
