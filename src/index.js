@@ -6,14 +6,14 @@ import shoppingListItemReducer from "./reducers/shoppingListItemReducer";
 import App from "./App";
 import "./index.css";
 
+
 const store = createStore(
-  shoppingListItemReducer,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+ shoppingListItemReducer,
+ window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
-ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  document.getElementById("root")
+ <Provider store={store}>
+   <App />
+ </Provider>, 
+ document.getElementById('root')
 );

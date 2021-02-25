@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import "./App.css";
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import './App.css';
 
 class App extends Component {
   handleOnClick() {
@@ -18,6 +18,11 @@ class App extends Component {
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  return { items: state.items };
+};
+
 
 const mapStateToProps = (state) => {
   return { items: state.items };
